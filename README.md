@@ -14,7 +14,7 @@ This project reproduces the "Achilles" paper which predicts the price of Gold vs
 | File | Description |
 |------|-------------|
 | `gold_price_lstm_baseline.ipynb` | Initial model using 60-day sequences and 8 features |
-| `gold_price_lstm_refined.ipynb` | Refined model using 120-day sequences and additional features like EMA |
+| `gold_price_lstm_achilles_reproduction.ipynb` | Refined model using 120-day sequences and additional features like EMA |
 
 ## Features Used
 
