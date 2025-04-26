@@ -1,33 +1,40 @@
-# Gold Price Prediction Using LSTM Neural Network
+# Gold Price Prediction Using LSTM Neural Network: A Reproduction Study
 
-This project reproduces the "Achilles" paper which predicts the price of Gold vs USD using an LSTM-based deep learning model. It uses technical indicators like moving averages and RSI to improve performance.
+This project reproduces parts of the paper "Achilles, Neural Network to Predict the Gold Vs US Dollar Integration with Trading Bot for Automatic Trading" by Angel Varela. The goal is to forecast the next-day closing price of gold (XAUUSD) using an LSTM-based deep learning model, enhanced with technical indicators like moving averages and RSI.
 
 ## Project Overview
 
-- Predict next-day **gold closing price**
-- Data source: Yahoo Finance (`GLD` ETF)
-- Model: LSTM neural network with time-series sequences
+- Prediction Target: Next-day gold closing price
+- Data Source: Yahoo Finance (GLD ETF)
+- Model: LSTM neural network using a 60-day sequence window
 - Tools: Python, TensorFlow, scikit-learn, pandas, matplotlib
 
 ## Notebooks
 
 | File | Description |
 |------|-------------|
-| `gold_price_lstm_baseline.ipynb` | Initial model using 60-day sequences and 8 features |
-| `gold_price_lstm_achilles_reproduction.ipynb` | Refined model using 120-day sequences and additional features like EMA |
+| `Baseline_Model_ARIMA.ipynb` | ARIMA baseline model for gold price forecasting |
+| `Main_Model_LSTM.ipynb` | Main LSTM model using 60-day sequences with technical indicators |
 
 ## Features Used
 
-- Open, High, Low, Close, Volume
-- SMA (10-day, 30-day)
-- RSI (14-day)
-- EMA (added in refined version)
+- Price Features: Open, High, Low, Close, Volume
+- Technical Indicators:
+- SMA (Simple Moving Average) — 10-day and 30-day
+- RSI (Relative Strength Index) — 14-day
 
 ## Model Results
 
-- Training loss: ~0.0003  
-- Validation loss: ~0.0012  
-- Predictions follow real prices closely with minor underestimation during sharp rises.
+- ARIMA Performance:
+    RMSE: 16.69
+    MAE: 13.91
+
+- LSTM Performance:
+    RMSE: 4.37
+    MAE: 3.54
+
+- Observations:
+    The LSTM model closely tracks the real gold price, capturing both trends and short-term fluctuations better than ARIMA.
 
 ## Requirements
 
