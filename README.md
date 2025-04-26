@@ -8,7 +8,7 @@ This project reproduces parts of the paper "Achilles, Neural Network to Predict 
 - Data Source: Yahoo Finance (GLD ETF)
 - Model: LSTM neural network using a 60-day sequence window
 - Tools: Python, TensorFlow, scikit-learn, pandas, matplotlib
-- [📄 Final Report](Final_Report.pdf) — Full project documentation and results.
+- [Final Report](Final_Report.pdf) — Full project documentation and results.
 
 ## Notebooks
 
